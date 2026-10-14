@@ -1,0 +1,9 @@
+# Gebouwde versies horen bij een GitHub Release, niet in de repository.
+*.exe
+*.zip
+*.pck
+builds/
+export/
+Thumbs.db
+desktop.ini
+.DS_Store

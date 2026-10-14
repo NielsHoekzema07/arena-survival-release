@@ -1,0 +1,86 @@
+# Arena Survival
+
+Een 2D top-down arena survival game, gemaakt in **Godot 4** als opdracht voor
+*Technische Specialisatie* (SD3A, Graafschap College).
+
+Je loopt rond in een kleine arena. Je wapen schiet automatisch op de dichtstbijzijnde vijand.
+Vijanden komen in waves, en na elke wave kies je een upgrade. Hoe langer je overleeft, hoe
+zwaarder het wordt. Wordt je geraakt en zijn je levenspunten op, dan begin je een nieuwe run.
+
+**Maker:** Niels Hoekzema  |  **Verdiepingsonderwerp:** object pooling en performance-optimalisatie
+
+![Eindbaas](docs/afbeeldingen/gameplay_baas.png)
+
+## Spelen
+
+1. Ga naar **[Releases](../../releases)** en download de nieuwste versie.
+2. Pak het zip-bestand uit en start het uitvoerbare bestand.
+
+Een webversie, als die er is, staat in de beschrijving van de release.
+
+Het spel is getest op Windows 11 met Godot 4.7.2.
+
+## Besturing
+
+| Toets | Actie |
+|---|---|
+| W A S D | Lopen |
+| Spatie of Shift | Dash: een korte sprint waarbij je onkwetsbaar bent |
+| 1 2 3 | Een upgrade of uitdaging kiezen |
+| R | Upgrades opnieuw trekken (twee keer per run) |
+| S | Een upgrade overslaan voor herstel |
+| Esc | Pauzeren |
+| F3 | Prestatie-overlay (FPS, frametijd, aantal objecten) |
+
+Je wapen schiet vanzelf. Je hoeft alleen te bewegen, te dashen en slimme upgrades te kiezen.
+
+## Wat zit erin
+
+- **Waves** met oplopende moeilijkheid. Na elke wave kies je één van drie **upgrades**, en soms
+  een **uitdaging** voor een beloning.
+- **35 upgrades** in drie zeldzaamheden (gewoon, zeldzaam en episch), met kogeleffecten zoals
+  split shot, ricochet, explosies, kettingbliksem, vuur, gif en bevriezing, en risicovolle
+  duivelsdeals.
+- **Synergieën:** bepaalde combinaties van upgrades versterken elkaar.
+- **Vijanden** die rennen, schieten, splitsen of een schild hebben, **elites** en **eindbazen**
+  elke vijfde wave.
+- **Pickups** voor herstel en tijdelijke snelheid.
+- Een **hoofdmenu**, pauzescherm, records en instellingen, en een **benchmark** voor het
+  pooling-onderzoek.
+
+| Hoofdmenu | Upgrade kiezen |
+|---|---|
+| ![Hoofdmenu](docs/afbeeldingen/hoofdmenu.png) | ![Upgradescherm](docs/afbeeldingen/upgradescherm.png) |
+
+| Uitdaging kiezen | Pauzescherm |
+|---|---|
+| ![Uitdaging](docs/afbeeldingen/uitdaging.png) | ![Pauze](docs/afbeeldingen/pauzescherm.png) |
+
+## Documentatie
+
+Ontwerp van het spel:
+
+  - [Vijanden en balans](docs/ontwerp/vijandtypes.md)
+  - [Waves](docs/ontwerp/waves.md)
+  - [Upgrades](docs/ontwerp/upgrades.md)
+  - [Collision layers](docs/ontwerp/collision-layers.md)
+
+## Over de broncode
+
+De broncode van het spel staat niet in deze repository. Dit is de repository voor de
+opgeleverde versies en de documentatie.
+
+## Credits
+
+Gemaakt met [Godot Engine](https://godotengine.org) (MIT-licentie).
+
+- Lettertype *Xolonium* door Severin Meyer, SIL Open Font License.
+- Muziek *House in a Forest Loop* en het game-over-geluid komen uit de Godot-tutorial, van Kenney, CC0.
+- De geluidseffecten zijn zelf gegenereerd en vallen onder het eigen werk van de maker.
+- Pixelart: *Tiny RPG Character Asset Pack* (soldaat), *basic asset pack* (vijanden) en *MagickArrow*
+  (projectiel). De licentiegegevens van deze packs worden nog aan deze lijst toegevoegd.
+- Gras en decoratie zijn zelf gemaakt.
+
+## Licentie
+
+Alle rechten voorbehouden, zie [LICENSE](LICENSE).
