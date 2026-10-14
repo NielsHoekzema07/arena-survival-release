@@ -130,8 +130,36 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 
 ## Week 7 — Verdieping: object pooling
 
-**Uren:** _
-**Status:** nog niet begonnen. Dit is het verdiepingsonderwerp en volgt na het afronden van de game. De git-tag `v1-geen-pooling` moet gezet worden vóór er pooling wordt toegevoegd, zodat er een baseline is.
+**Uren:** _ (de week loopt nog)
+**Gedaan:**
+
+- Object pool gebouwd (`PoolManager`, een autoload) voor vijanden en kogels. Er is één codepad voor beide varianten: zonder pool doet `neem()` een gewone `instantiate()` en `geef_terug()` een `queue_free()`. Zo wordt in de meting alleen het mechanisme vergeleken
+- Vijanden en kogels kunnen uit- en weer aangezet worden (`deactiveer()` en `activeer()`): onzichtbaar, geen physics, uit de groepen
+- Benchmark-scene die N objecten tegelijk levend houdt en steeds vervangt, en de frametijd meet. Te starten vanuit het hoofdmenu (met instellingenscherm en een resultatenoverzicht met tabellen en grafieken) of vanaf de opdrachtregel voor de scripts in `tools/`
+- Scripts om de meetreeks uit te voeren en de data te verwerken tot tabellen en grafieken
+- Besluit voor de game: kogels worden gepoold, vijanden niet
+
+**Problemen en oplossingen:**
+
+- *Een CollisionObject uitzetten in een physics-callback geeft een fout* ("Disabling a CollisionObject node during a physics callback is not allowed"). Een kogel die een vijand raakt, geeft zichzelf terug aan de pool in de callback van die botsing. Opgelost met `set_deferred` voor `process_mode` en `monitoring`. Het uitzetten en weer aanzetten staan allebei in de uitgestelde rij, zodat de volgorde klopt als een object in dezelfde frame meteen hergebruikt wordt.
+- *Een hergebruikte vijand werd twee keer aan hetzelfde signaal gekoppeld.* De spawner verbond `gestorven` bij elke spawn. Opgelost met een controle of de verbinding al bestaat.
+- *Na een herstart staan er verwijderde nodes in de pool.* Opgelost door de pool te legen bij het begin van elke run.
+- *De meting in headless-modus liet geen verschil zien.* De frametijd bleef vast op ongeveer 7,7 ms, onafhankelijk van het aantal objecten. De benchmark draait daarom in een klein venster (640x360), met vsync en framebegrenzing uit.
+- *Alle objecten verliepen tegelijk, waardoor er elke levensduur een golf van aanmaken en opruimen kwam.* Opgelost met een gelijkmatig patroon, waarbij nieuwe objecten verspreid over de tijd worden aangemaakt. Het golfpatroon blijft als optie, om pieken te kunnen meten.
+- *De Godot-monitor `TIME_PROCESS` klopt niet met de echte frametijd* (6,9 ms terwijl een frame 0,7 ms duurt). De frametijd per frame is daarom de hoofdmeting.
+- *Godot behandelt CSV-bestanden als vertaalbestanden* en maakte rommelbestanden naast de meetdata. Opgelost met een `.gdignore` in de map met meetdata.
+- *Een release-export is niet mogelijk*, omdat de exportsjablonen niet geïnstalleerd zijn. De metingen draaien daarom in een debug-build. Dit is een beperking die in het onderzoek moet staan.
+- *Bij vijanden is het totaal trager met pool, bij kogels sneller.* Het aanmaken en opruimen is met pool goedkoper, maar `move_and_slide()` kost bij een hergebruikte vijand meer. Ik heb meerdere mogelijke oorzaken uitgesloten (uitzetten via `process_mode`, uit de boom halen, laag en mask, botsingsstraal, animatie) en de echte oorzaak niet gevonden. Het is vastgelegd in `docs/pooling-bevindingen.md`. Besluit: in de game worden alleen kogels gepoold.
+
+**Wat nog moet:** de volledige meetreeks draaien (met de computer in rust) en het onderzoeksdocument schrijven.
+
+**Bronnen:** (opgezocht met een zoekopdracht; lees de pagina's zelf nog door voordat je ze vermeldt)
+
+- Godot Docs, *CPU optimization*: https://docs.godotengine.org/en/stable/tutorials/performance/cpu_optimization.html
+- Godot Docs, *General optimization tips*: https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html
+- *Object Pooling vs Instantiate in Godot 4: when it actually matters* (DEV Community): https://dev.to/saltmire/object-pooling-vs-instantiate-in-godot-4-when-it-actually-matters-h9k
+- *The Complete Guide to Object Pooling, Killing Stutter in Godot Through Reuse*: https://uhiyama-lab.com/en/notes/godot/godot-object-pooling-basics/
+- Godot Forum, *How do you decide when a mobile game needs object pooling in Godot?*: https://forum.godotengine.org/t/how-do-you-decide-when-a-mobile-game-needs-object-pooling-in-godot/142731
 
 ---
 
