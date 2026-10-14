@@ -65,6 +65,13 @@ Ontwerp van het spel:
   - [Upgrades](docs/ontwerp/upgrades.md)
   - [Collision layers](docs/ontwerp/collision-layers.md)
 
+Hoe het project is verlopen:
+
+  - [Plan van Aanpak](docs/proces/plan-van-aanpak.docx)
+  - [Logboek](docs/proces/logboek.md): per week wat er gedaan is, welke problemen er waren en hoe ze zijn opgelost
+  - [Later-lijst](docs/proces/later-lijst.md): ideeën die bewust niet zijn gebouwd, met de reden
+  - [Upgrade-ideeën](docs/proces/upgrade-ideen.md): de keuzelijst waaruit de upgrades zijn gekozen
+
 ## Over de broncode
 
 De broncode van het spel staat niet in deze repository. Dit is de repository voor de
