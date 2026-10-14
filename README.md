@@ -81,12 +81,20 @@ opgeleverde versies en de documentatie.
 
 Gemaakt met [Godot Engine](https://godotengine.org) (MIT-licentie).
 
-- Lettertype *Xolonium* door Severin Meyer, SIL Open Font License.
-- Muziek *House in a Forest Loop* en het game-over-geluid komen uit de Godot-tutorial, van Kenney, CC0.
-- De geluidseffecten zijn zelf gegenereerd en vallen onder het eigen werk van de maker.
-- Pixelart: *Tiny RPG Character Asset Pack* (soldaat), *basic asset pack* (vijanden) en *MagickArrow*
-  (projectiel). De licentiegegevens van deze packs worden nog aan deze lijst toegevoegd.
+**Muziek:** *House In a Forest Loop* door HorrorPen (2012), gebruikt onder de licentie
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Bron:
+[OpenGameArt](https://opengameart.org/content/loop-house-in-a-forest).
+
+**Pixelart** (gebruikt in het spel; de rechten blijven bij de makers):
+
+- Soldaat: *Tiny RPG Character Asset Pack* door [Zerie](https://zerie.itch.io/tiny-rpg-character-asset-pack)
+- Projectiel: *Free Pixel Effects Pack #15 - Magic Arrows* door [XYEzawr](https://xyezawr.itch.io/gif-free-pixel-effects-pack-15-magick-arrows)
+- Vijanden: een gratis demon-sprite pack van itch.io (de bron wordt nog bevestigd)
 - Gras en decoratie zijn zelf gemaakt.
+
+**Lettertype:** *Xolonium* door Severin Meyer, SIL Open Font License 1.1.
+
+**Geluidseffecten:** zelf gegenereerd.
 
 ## Licentie
 
