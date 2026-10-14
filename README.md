@@ -89,7 +89,7 @@ Gemaakt met [Godot Engine](https://godotengine.org) (MIT-licentie).
 
 - Soldaat: *Tiny RPG Character Asset Pack* door [Zerie](https://zerie.itch.io/tiny-rpg-character-asset-pack)
 - Projectiel: *Free Pixel Effects Pack #15 - Magic Arrows* door [XYEzawr](https://xyezawr.itch.io/gif-free-pixel-effects-pack-15-magick-arrows)
-- Vijanden: een gratis demon-sprite pack van itch.io (de bron wordt nog bevestigd)
+- Vijanden: *Demon Sprite Pack* door [Deep Dive Game Studio](https://deepdivegamestudio.itch.io/demon-sprite-pack)
 - Gras en decoratie zijn zelf gemaakt.
 
 **Lettertype:** *Xolonium* door Severin Meyer, SIL Open Font License 1.1.
