@@ -13,12 +13,19 @@ zwaarder het wordt. Wordt je geraakt en zijn je levenspunten op, dan begin je ee
 
 ## Spelen
 
-1. Ga naar **[Releases](../../releases)** en download de nieuwste versie.
-2. Pak het zip-bestand uit en start het uitvoerbare bestand.
+### [Download Arena Survival v1.0 voor Windows](https://github.com/NielsHoekzema07/arena-survival-release/releases/latest)
 
-Een webversie, als die er is, staat in de beschrijving van de release.
+1. Klik op de link hierboven en download onder **Assets** het bestand `ArenaSurvival-v1.0-windows-x64.zip`.
+2. Pak het zip-bestand uit.
+3. Start `ArenaSurvival.exe`. Installeren is niet nodig.
 
-Het spel is getest op Windows 11 met Godot 4.7.2.
+Windows kan een waarschuwing tonen omdat het programma niet digitaal ondertekend is. Kies dan
+**Meer info** en daarna **Toch uitvoeren**.
+
+*English:* download the zip from the [latest release](https://github.com/NielsHoekzema07/arena-survival-release/releases/latest),
+extract it and run `ArenaSurvival.exe`. If Windows shows a warning, click "More info" and then "Run anyway".
+
+Het spel is getest op Windows 11 (64-bit) met Godot 4.7.2.
 
 ## Besturing
 
