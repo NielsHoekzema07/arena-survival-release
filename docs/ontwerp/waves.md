@@ -116,3 +116,42 @@ Vluchten alleen werkt niet meer (de Imp is sneller), je moet dus schieten.
 ## Nog te doen
 
 Extra's (zie het stappenplan): hit-feedback, highscore, elites en dergelijke.
+
+## Uitdagingen
+
+Vanaf wave 3 kies je om de wave een uitdaging (of je slaat hem over). Er zijn negen:
+Overstroming, Ruwe nacht, Snelle horde, Stormloop, Taaie horde, en nieuw Bloedmaan (taaier,
+minder vijanden, volledig herstel), Zwerm (dubbel zoveel zwakke vijanden), IJzeren vuist
+(dubbele levenspunten, minder en trager) en Bliksemaanval (sneller, achter elkaar, herstel).
+Een uitdaging is een `WaveModifier`-resource in `resources/modifiers/`.
+
+## Na een eindbaas
+
+Na elke eindbaas krijg je een extra keuze vooraf, met alleen **epische** upgrades (of zeldzame als
+er te weinig episch beschikbaar is), voordat de gewone keuze volgt.
+
+## Gevaren in de arena
+
+Vanaf wave 4 verschijnen er tijdens een wave gevaren (`scenes/world/gevaren.gd`), elke 4 tot 8,5 s
+en steeds vaker. Ze kondigen zich aan met een waarschuwing, en ze raken ook de vijanden:
+
+- **Bliksem:** een rode cirkel loopt vol (1,3 s) en dan slaat hij in. De schade is 100 (schaalt
+  mee met de wave) voor jou en het dubbele voor vijanden in de cirkel.
+- **Vuurpoel:** na 1 s waarschuwing brandt hij 6 s en doet elke halve seconde schade aan wie erin staat.
+
+## Klassen
+
+Aan het begin van elke run kies je een klasse (`scenes/ui/klasse_scherm.gd`): de **Jager** (+20% snelheid,
++18% vuursnelheid, -20% levenspunten), de **Tank** (+60% levenspunten, +10% herstel na een wave, 8%
+trager) of het **Glazen kanon** (+80% schade, -40% levenspunten). Daarna werken alle upgrades gewoon.
+
+## Weer
+
+Per run is er helder weer, regen, mist of een donkere avond (`scenes/world/weer.gd`). Het is alleen
+sfeer en kan in de instellingen uit. In de dagelijkse run is het weer per datum hetzelfde.
+
+## Prestaties
+
+Twaalf prestaties (`scripts/prestaties.gd`), bewaard in de records en zichtbaar in het hoofdmenu:
+bijvoorbeeld wave 5, 10 en 15 halen, een eindbaas verslaan zonder schade, alle vier de bazen
+verslaan, 300 kills in een run of met alle klassen spelen.

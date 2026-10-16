@@ -101,9 +101,9 @@ van wave 1; de schaling per wave wordt bij het spawnen toegepast en niet in de
 
 ## Bijzondere types
 
-Naast de vier gewone types zijn er drie met eigen gedrag. Ze gebruiken dezelfde
-spritesheets als de gewone vijanden, met een `tint` om ze uit elkaar te houden.
-Dat kan omdat een type alleen data is: een nieuw type is een `.tres`, geen code.
+Naast de vier gewone types zijn er types met eigen gedrag. Elk heeft een eigen
+spritesheet (zelf getekend, zie `tools/maak_sprites.py`). Een type is alleen data: een
+nieuw type is een `.tres`, en alleen een nieuw gedrag vraagt code.
 
 | Type | Vanaf wave | Gedrag | Levenspunten | Snelheid |
 |---|---|---|---|---|
@@ -111,6 +111,8 @@ Dat kan omdat een type alleen data is: een nieuw type is een `.tres`, geen code.
 | Slime Brute | 5 | splitst bij doodgaan in twee Slimelings | 130 | 150 |
 | Slimeling | - | alleen als restant van een Slime Brute | 35 | 235 |
 | Shieldbearer | 7 | 140 schild dat eerst schade opvangt | 90 | 200 |
+| Bomber | 6 | rent op je af, steekt zichzelf aan op ongeveer 80 px en ontploft na 0,7 s (130 px straal, 150 schade). Een bomber die vlak bij je doodgaat ontploft ook | 60 | 230 |
+| Wraith | 8 | vliegt en flitst elke 3,4 s naar een plek op 150-260 px van je af, na een korte fade-uit | 110 | 210 |
 
 De afstand van de Archer ligt bewust onder het wapenbereik (200): een schieter die
 daarbuiten blijft is niet te raken en laat de wave hangen.
@@ -128,9 +130,16 @@ maximaal 22%). Een elite is 1,35 keer zo groot, heeft drie keer de levenspunten 
 keer de contactschade, is goudkleurig en laat altijd een pickup vallen. De waarschuwing
 voor een elite is geel en groter.
 
+**Elite-trucs.** Een elite krijgt willekeurig een eigen truc, en de kleur laat zien welke:
+de blauwe *Spiegel* kaatst 30% van de kogels terug naar je, de groene *Beschermer* geeft
+vijanden om zich heen elke 4 s een schild van 45, en de oranje *Mijnenlegger* laat elke 5 s een
+mijn achter (`scenes/effects/vijand_mijn.gd`). In de naam boven een baasbalk staat de soort.
+
 **Eindbazen** verschijnen elke 5e wave bovenop de gewone vijanden. De eerste is de
 Abomination King (2000 levenspunten, schaalt mee met de wave), de tweede de vliegende
-Imp Lord. Een baas:
+Imp Lord, de derde de vliegende Phantom Queen (2200 levenspunten), die net als de Wraith
+naar je toe teleporteert, en de vierde de Brood Mother (2400 levenspunten), die elke 7 s drie
+Slimelings oproept (`hulp_type` in het `VijandType`; de hulptroepen tellen mee voor de wave). Een baas:
 
 - stopt een seconde met een rood knipperende waarschuwing en stormt dan op je af (charge)
 - schiet af en toe een ring van 14 kogels

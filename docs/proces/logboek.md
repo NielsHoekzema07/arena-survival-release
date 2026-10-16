@@ -186,6 +186,9 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - Vijf nieuwe upgrades (Zoekende kogels, Adrenaline, Berserker, Plunderaar, Echoschot), drie nieuwe synergieën en vier nieuwe uitdagingen
 - Extra opties (bereikcirkel, treffersflits, treffervertraging, volledig scherm), schade per bron en upgrade-iconen op het game-over-scherm, en een dagelijkse run met elke dag dezelfde arena
 - Gameplay-GIF voor de README, gemaakt met de filmmodus van Godot en een eigen GIF-encoder (`tools/maak_gif.py`)
+- Elite-varianten met eigen trucs (Spiegel, Beschermer, Mijnenlegger) en een vierde baas die hulp oproept (Brood Mother)
+- Gevaren in de arena (bliksem en vuurpoelen met waarschuwing), een klassenscherm aan het begin van een run, een epische beloning na een eindbaas en twaalf prestaties
+- Kogelspoor, kleurrijkere inslageffecten, weer (regen, mist, avond) en een eigen geluid per vijandtype en per baas
 
 **Problemen en oplossingen:**
 
@@ -196,6 +199,8 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - *Een testscript schreef records naar het echte opslagbestand van de speler.* Na elke testrun verwijder ik `user://voortgang.cfg`.
 - *Vijanden bleven tegen een vijver aan hangen.* Ze liepen recht op de speler af. Opgelost met een stroomveld om het water heen (`scenes/world/looproute.gd`). Getest met 12 lopers achter vijvers, in drie willekeurige arena's: met het stroomveld kwamen ze allemaal aan, zonder bleven er 3 of 4 hangen.
 - *Een ingedrukte toets koos of oversloeg een upgrade.* S is lopen én overslaan. Opgelost met een halve seconde pauze na het openen van het scherm en het negeren van herhaalde toetsaanslagen.
+- *Een kleurtint over de wereld werkte niet vanuit een CanvasLayer.* Een CanvasModulate werkt alleen op het canvas waar hij in zit, dus de avondtint hangt nu in de hoofdscene en de HUD blijft ongekleurd.
+- *Tests bleven hangen op het klassenscherm.* Dat scherm pauzeert het spel. Het kan met `--geen-klasse` (of `Voortgang.klasse_scherm_aan = false` in een testscript) worden overgeslagen.
 - *Eerst waren ook de upgrades in de dagelijkse run vast.* Dat bleek niet de bedoeling: de upgrades zijn altijd willekeurig, alleen de arena is per dag hetzelfde.
 
 ---

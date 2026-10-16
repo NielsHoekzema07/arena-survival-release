@@ -106,6 +106,9 @@ en staan in het pauzescherm (Esc).
 | IJsbliksem | bevriezing + kettingbliksem | bliksem vertraagt de vijanden die hij raakt |
 | Stekelgolf | doornen + schokgolf | de schokgolf doet extra schade gelijk aan je doornen |
 | Bloedbad | levensdief + explosieve kogels | explosies genezen je via je levensdief |
+| Giftige golf | gif + schokgolf | de schokgolf vergiftigt alles in zijn bereik |
+| IJsmijn | bevriezing + mijnen | mijnen vertragen de vijanden die ze raken |
+| Zoekraket | zoekende kogels + explosie | explosies van zoekende kogels doen 50% meer schade |
 
 ## Uitdagingen (wave-modifiers)
 
@@ -158,3 +161,28 @@ aanpassingen gedaan:
 - Het herstel na een wave is 15% in plaats van 25%, en een hartje geneest 12% in plaats van 20%.
 - Vijanden groeien sneller mee, zie [waves.md](waves.md).
 - De upgrade Waterloper (over vijvers lopen) is verwijderd.
+
+## Gekozen upgrades zien
+
+Linksonder in beeld staat een icoon voor elke upgrade die je deze run hebt gekozen. De kleur van
+de rand is de zeldzaamheid (grijs, blauw, paars), de kleur van het vlak is de categorie (rood
+aanval, groen verdediging, blauw beweging, paars risico) en het kleine getal is hoe vaak je de
+upgrade hebt. Beweeg de muis over een icoon voor de naam, de uitleg, hoe vaak je hem mag kiezen
+en het totale effect tot nu toe (bijvoorbeeld "Schade +149%"). Een nadeel van een duivelsdeal
+staat in rood.
+
+Een icoon is nu de beginletters van de naam. Wil je een plaatje, zet dan het veld `icoon` in de
+`.tres` van de upgrade.
+
+Heb je meer dan 10 upgrades, dan toont de balk er 9 (de zeldzaamste eerst) en een tegeltje met een
+plusje ("+27"). Klik daarop om alle iconen te zien, klik op het streepje om weer in te klappen.
+
+## Nieuwe upgrades (fase afwerking)
+
+| Upgrade | Zeldzaamheid | Wat het doet |
+|---|---|---|
+| Zoekende kogels | zeldzaam | kogels buigen af naar de dichtstbijzijnde vijand binnen 280 px |
+| Adrenaline | zeldzaam | onder 30% levenspunten schiet je 60% sneller |
+| Berserker | zeldzaam (risico) | tot 60% meer schade naarmate je meer levenspunten kwijt bent |
+| Plunderaar | gewoon | vijanden laten 5% vaker een pickup vallen |
+| Echoschot | episch | elke 4e salvo schiet je meteen nog een keer (bij stapelen vaker) |
