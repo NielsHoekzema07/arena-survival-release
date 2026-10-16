@@ -97,12 +97,7 @@ Gemaakt met [Godot Engine](https://godotengine.org) (MIT-licentie).
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Bron:
 [OpenGameArt](https://opengameart.org/content/loop-house-in-a-forest).
 
-**Pixelart** (gebruikt in het spel; de rechten blijven bij de makers):
-
-- Soldaat: *Tiny RPG Character Asset Pack* door [Zerie](https://zerie.itch.io/tiny-rpg-character-asset-pack)
-- Projectiel: *Free Pixel Effects Pack #15 - Magic Arrows* door [XYEzawr](https://xyezawr.itch.io/gif-free-pixel-effects-pack-15-magick-arrows)
-- Vijanden: *Demon Sprite Pack* door [Deep Dive Game Studio](https://deepdivegamestudio.itch.io/demon-sprite-pack)
-- Gras en decoratie zijn zelf gemaakt.
+**Pixelart:** alle afbeeldingen (speler, vijanden, projectiel, gras, decoratie en de iconen van de upgrades) zijn zelf gemaakt.
 
 **Lettertype:** *Xolonium* door Severin Meyer, SIL Open Font License 1.1.
 
