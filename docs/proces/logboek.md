@@ -180,6 +180,12 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - Game feel: schermtrilling, hit-stop, schadecijfers, deeltjes bij inslag en doodgaan
 - Prestatie-overlay op F3 (FPS, frametijd, nodes, aantal vijanden en kogels)
 - Hint over de besturing in de eerste runs
+- HUD met iconen van de gekozen upgrades (hover toont uitleg en totaaleffect, een plusje klapt een lange lijst in)
+- Alle afbeeldingen zelf getekend (speler, negen vijanden, projectiel, upgrade-iconen, spelicoon) met `tools/maak_sprites.py` en `tools/maak_upgrade_iconen.py`. De gedownloade itch.io-sprites zijn daarmee vervangen
+- Nieuwe vijanden: Bomber (ontploft, ook als je hem neerschiet) en Wraith (teleporteert), en een derde baas, de Phantom Queen
+- Vijf nieuwe upgrades (Zoekende kogels, Adrenaline, Berserker, Plunderaar, Echoschot), drie nieuwe synergieën en vier nieuwe uitdagingen
+- Extra opties (bereikcirkel, treffersflits, treffervertraging, volledig scherm), schade per bron en upgrade-iconen op het game-over-scherm, en een dagelijkse run met elke dag dezelfde arena
+- Gameplay-GIF voor de README, gemaakt met de filmmodus van Godot en een eigen GIF-encoder (`tools/maak_gif.py`)
 
 **Problemen en oplossingen:**
 
@@ -188,6 +194,9 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - *Een schieter die buiten het wapenbereik blijft is niet te doden en laat de wave hangen.* De afstand van de schieter ligt daarom onder het bereik van het wapen.
 - *De speler werd na een speeltest te snel te sterk.* Stat-upgrades verlaagd, zeldzame upgrades later en trager waarschijnlijk, herstel verlaagd en vijanden sneller zwaarder gemaakt. Over water lopen is verwijderd.
 - *Een testscript schreef records naar het echte opslagbestand van de speler.* Na elke testrun verwijder ik `user://voortgang.cfg`.
+- *Vijanden bleven tegen een vijver aan hangen.* Ze liepen recht op de speler af. Opgelost met een stroomveld om het water heen (`scenes/world/looproute.gd`). Getest met 12 lopers achter vijvers, in drie willekeurige arena's: met het stroomveld kwamen ze allemaal aan, zonder bleven er 3 of 4 hangen.
+- *Een ingedrukte toets koos of oversloeg een upgrade.* S is lopen én overslaan. Opgelost met een halve seconde pauze na het openen van het scherm en het negeren van herhaalde toetsaanslagen.
+- *Eerst waren ook de upgrades in de dagelijkse run vast.* Dat bleek niet de bedoeling: de upgrades zijn altijd willekeurig, alleen de arena is per dag hetzelfde.
 
 ---
 
