@@ -9,7 +9,7 @@ zwaarder het wordt. Wordt je geraakt en zijn je levenspunten op, dan begin je ee
 
 **Maker:** Niels Hoekzema  |  **Verdiepingsonderwerp:** object pooling en performance-optimalisatie
 
-![Eindbaas](docs/afbeeldingen/gameplay_baas.png)
+![Gameplay](docs/afbeeldingen/gameplay.gif)
 
 ## Spelen
 
