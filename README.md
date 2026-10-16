@@ -93,13 +93,15 @@ opgeleverde versies en de documentatie.
 
 Gemaakt met [Godot Engine](https://godotengine.org) (MIT-licentie).
 
-**Muziek:** *House In a Forest Loop* door HorrorPen (2012), gebruikt onder de licentie
+**Muziek (eindbazen):** *Epic Boss Battle* door Juhani Junkala, CC0 (publiek domein), via [OpenGameArt](https://opengameart.org/content/boss-battle-music).
+
+**Muziek (gewoon):** *House In a Forest Loop* door HorrorPen (2012), gebruikt onder de licentie
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Bron:
 [OpenGameArt](https://opengameart.org/content/loop-house-in-a-forest).
 
 **Pixelart:** alle afbeeldingen (speler, vijanden, projectiel, gras, decoratie en de iconen van de upgrades) zijn zelf gemaakt.
 
-**Lettertype:** *Xolonium* door Severin Meyer, SIL Open Font License 1.1.
+**Lettertype:** *Cinzel* door Natanael Gama, SIL Open Font License 1.1.
 
 **Geluidseffecten:** zelf gegenereerd.
 
