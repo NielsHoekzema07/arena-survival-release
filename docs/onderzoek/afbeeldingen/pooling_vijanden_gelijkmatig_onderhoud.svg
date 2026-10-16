@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" viewBox="0 0 640 380" font-family="sans-serif">
+<rect width="640" height="380" fill="white"/>
+<text x="320.0" y="26" text-anchor="middle" font-size="16" font-weight="bold">Vijanden: tijd voor aanmaken en opruimen per frame (gelijkmatig)</text>
+<line x1="70" y1="320.0" x2="620" y2="320.0" stroke="#e5e5e5"/>
+<text x="62" y="324.0" text-anchor="end" font-size="11" fill="#555">0.00</text>
+<line x1="70" y1="266.0" x2="620" y2="266.0" stroke="#e5e5e5"/>
+<text x="62" y="270.0" text-anchor="end" font-size="11" fill="#555">0.04</text>
+<line x1="70" y1="212.0" x2="620" y2="212.0" stroke="#e5e5e5"/>
+<text x="62" y="216.0" text-anchor="end" font-size="11" fill="#555">0.08</text>
+<line x1="70" y1="158.0" x2="620" y2="158.0" stroke="#e5e5e5"/>
+<text x="62" y="162.0" text-anchor="end" font-size="11" fill="#555">0.12</text>
+<line x1="70" y1="104.0" x2="620" y2="104.0" stroke="#e5e5e5"/>
+<text x="62" y="108.0" text-anchor="end" font-size="11" fill="#555">0.16</text>
+<line x1="70" y1="50.0" x2="620" y2="50.0" stroke="#e5e5e5"/>
+<text x="62" y="54.0" text-anchor="end" font-size="11" fill="#555">0.19</text>
+<text x="16" y="185.0" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90 16 185.0)">Gemiddeld per frame (ms)</text>
+<text x="70.0" y="340" text-anchor="middle" font-size="12" fill="#555">50</text>
+<text x="207.5" y="340" text-anchor="middle" font-size="12" fill="#555">100</text>
+<text x="345.0" y="340" text-anchor="middle" font-size="12" fill="#555">200</text>
+<text x="482.5" y="340" text-anchor="middle" font-size="12" fill="#555">500</text>
+<text x="620.0" y="340" text-anchor="middle" font-size="12" fill="#555">1000</text>
+<text x="345.0" y="368" text-anchor="middle" font-size="12" fill="#555">Aantal gelijktijdige objecten</text>
+<line x1="70" y1="320" x2="620" y2="320" stroke="#888"/>
+<polyline points="70.0,312.0 207.5,305.0 345.0,295.7 482.5,243.8 620.0,74.5" fill="none" stroke="#d9534f" stroke-width="2.5"/>
+<circle cx="70.0" cy="312.0" r="4" fill="#d9534f"/>
+<circle cx="207.5" cy="305.0" r="4" fill="#d9534f"/>
+<circle cx="345.0" cy="295.7" r="4" fill="#d9534f"/>
+<circle cx="482.5" cy="243.8" r="4" fill="#d9534f"/>
+<circle cx="620.0" cy="74.5" r="4" fill="#d9534f"/>
+<rect x="82" y="56" width="14" height="14" fill="#d9534f"/>
+<text x="102" y="68" font-size="12">Zonder pooling</text>
+<polyline points="70.0,313.4 207.5,310.6 345.0,292.2 482.5,259.7 620.0,144.6" fill="none" stroke="#2e9e5b" stroke-width="2.5"/>
+<circle cx="70.0" cy="313.4" r="4" fill="#2e9e5b"/>
+<circle cx="207.5" cy="310.6" r="4" fill="#2e9e5b"/>
+<circle cx="345.0" cy="292.2" r="4" fill="#2e9e5b"/>
+<circle cx="482.5" cy="259.7" r="4" fill="#2e9e5b"/>
+<circle cx="620.0" cy="144.6" r="4" fill="#2e9e5b"/>
+<rect x="262" y="56" width="14" height="14" fill="#2e9e5b"/>
+<text x="282" y="68" font-size="12">Met pooling</text>
+</svg>

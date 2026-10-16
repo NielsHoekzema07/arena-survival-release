@@ -137,7 +137,9 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - Vijanden en kogels kunnen uit- en weer aangezet worden (`deactiveer()` en `activeer()`): onzichtbaar, geen physics, uit de groepen
 - Benchmark-scene die N objecten tegelijk levend houdt en steeds vervangt, en de frametijd meet. Te starten vanuit het hoofdmenu (met instellingenscherm en een resultatenoverzicht met tabellen en grafieken) of vanaf de opdrachtregel voor de scripts in `tools/`
 - Scripts om de meetreeks uit te voeren en de data te verwerken tot tabellen en grafieken
-- Besluit voor de game: kogels worden gepoold, vijanden niet
+- Volledige meetreeks gedraaid op de release-export: 3 herhalingen van 30 s, 50 tot 1000 objecten, kogels en vijanden, met en zonder pool, plus het golfpatroon bij 200 en 1000 objecten (102 runs in totaal)
+- Onderzoeksdocument geschreven (`docs/onderzoek-object-pooling.md`) met onderzoeksvraag, methode, tabellen, grafieken, analyse, conclusie en beperkingen
+- Besluit voor de game: niets wordt gepoold (zie hieronder hoe ik daarop kwam)
 
 **Problemen en oplossingen:**
 
@@ -148,10 +150,14 @@ Per week: bestede uren, wat er af is, en welk probleem is tegengekomen met de op
 - *Alle objecten verliepen tegelijk, waardoor er elke levensduur een golf van aanmaken en opruimen kwam.* Opgelost met een gelijkmatig patroon, waarbij nieuwe objecten verspreid over de tijd worden aangemaakt. Het golfpatroon blijft als optie, om pieken te kunnen meten.
 - *De Godot-monitor `TIME_PROCESS` klopt niet met de echte frametijd* (6,9 ms terwijl een frame 0,7 ms duurt). De frametijd per frame is daarom de hoofdmeting.
 - *Godot behandelt CSV-bestanden als vertaalbestanden* en maakte rommelbestanden naast de meetdata. Opgelost met een `.gdignore` in de map met meetdata.
-- *Een release-export is niet mogelijk*, omdat de exportsjablonen niet geïnstalleerd zijn. De metingen draaien daarom in een debug-build. Dit is een beperking die in het onderzoek moet staan.
-- *Bij vijanden is het totaal trager met pool, bij kogels sneller.* Het aanmaken en opruimen is met pool goedkoper, maar `move_and_slide()` kost bij een hergebruikte vijand meer. Ik heb meerdere mogelijke oorzaken uitgesloten (uitzetten via `process_mode`, uit de boom halen, laag en mask, botsingsstraal, animatie) en de echte oorzaak niet gevonden. Het is vastgelegd in `docs/pooling-bevindingen.md`. Besluit: in de game worden alleen kogels gepoold.
+- *Een release-export was eerst niet mogelijk*, omdat de exportsjablonen niet geïnstalleerd waren. De eerste proefmetingen draaien daarom in een debug-build. Later heb ik de sjablonen geïnstalleerd en de volledige meetreeks op de release-export gedraaid.
+- *Bij vijanden is het totaal trager met pool, bij kogels sneller.* Het aanmaken en opruimen is met pool goedkoper, maar `move_and_slide()` kost bij een hergebruikte vijand meer. Ik heb meerdere mogelijke oorzaken uitgesloten (uitzetten via `process_mode`, uit de boom halen, laag en mask, botsingsstraal, animatie) en de echte oorzaak niet gevonden. Het is vastgelegd in `docs/pooling-bevindingen.md`. Dit is bevestigd in de meetreeks: vanaf ongeveer 500 vijanden is pooling 18% trager, bij 1000 vijanden 37%, op de mediaan.
+- *Het meetscript schreef geen CSV bij de release-export.* De exe kon het relatieve pad niet openen (fout 7). De resultaatregels stonden wel in de uitvoer, dus ik heb het bestand daaruit opgebouwd en het script aangepast zodat het pad absoluut wordt.
+- *Eén meetrun bij kogels zonder pool was een uitschieter* (6,9 ms bij zowel 500 als 1000 kogels, terwijl de andere runs 1,1 tot 2,3 ms gaven). Daardoor leek pooling bij kogels 46 tot 59% sneller. Ik heb de kogelmeting herhaald tot 6 herhalingen en de mediaan erbij gezet. Op de mediaan is pooling bij 200 tot 1000 kogels juist 19 tot 25% trager. Ook bij vijanden zat er één trage run met pool (200 vijanden, 2,26 ms), waardoor het gemiddelde +35% gaf terwijl de mediaan gelijk was. Les: bij 3 herhalingen kan één verstoorde run het gemiddelde bepalen, dus de mediaan en de spreiding erbij vermelden.
+- *Mijn eerste keuze (kogels wel poolen) bleek niet te kloppen.* Die was gebaseerd op de proefmetingen in de debug-build. De release-meting met meer herhalingen liet geen voordeel zien. Besluit: de beste prestaties geeft het spel zonder pool, dus `Weapon.pool_kogels` en `EnemySpawner.pool_vijanden` staan uit. De pool zelf blijft in het project voor de benchmark. De redenering staat in het onderzoeksdocument, onderdeel 6.
+- *De geheugenmeting is niet bruikbaar:* `geheugen_mb` staat in de CSV overal op 0. Geheugen is daarom niet vergeleken; vermeld in de beperkingen.
 
-**Wat nog moet:** de volledige meetreeks draaien (met de computer in rust) en het onderzoeksdocument schrijven.
+**Wat nog moet:** de geheugenmeting repareren of weglaten, bronnen in het onderzoek lezen en vermelden, het onderzoek in de release-repo zetten, en de uren van deze week invullen.
 
 **Bronnen:** (opgezocht met een zoekopdracht; lees de pagina's zelf nog door voordat je ze vermeldt)
 

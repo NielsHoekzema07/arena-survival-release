@@ -72,6 +72,11 @@ Ontwerp van het spel:
   - [Upgrades](docs/ontwerp/upgrades.md)
   - [Collision layers](docs/ontwerp/collision-layers.md)
 
+Onderzoek (verdieping):
+
+  - [Object pooling: onderzoek en conclusie](docs/onderzoek/onderzoek-object-pooling.md): gemeten wat pooling oplevert, met tabellen, grafieken en de onderbouwde keuze
+  - [Bevindingen over vijanden](docs/onderzoek/pooling-bevindingen.md): waarom hergebruikte vijanden trager zijn
+
 Hoe het project is verlopen:
 
   - [Plan van Aanpak](docs/proces/plan-van-aanpak.docx)
