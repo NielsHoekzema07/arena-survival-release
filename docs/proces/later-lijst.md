@@ -33,9 +33,8 @@ Uit de ideeënlijst in [upgrade-ideen.md](upgrade-ideen.md) zijn alleen de aange
 | Idee | Waarom niet nu |
 |---|---|
 | **Object pooling in de game zelf** | Dit is het verdiepingsonderwerp en wordt apart uitgewerkt, met een eigen benchmark. Een vooraf gebouwde variant zou de meting beïnvloeden. |
-| **Kogelspoor** (lijn achter elke kogel) | Kost per kogel extra werk en zou de pooling-meting beïnvloeden. De inslageffecten zijn er wel. |
-| **Pathfinding rond vijvers** | Lopers lopen recht op de speler af en kunnen achter een vijver blijven hangen. Dat is nu opgevangen met een vangnet (na 20 s zonder kill worden achterblijvers verplaatst). Echte pathfinding is veel werk voor een klein spelgevoel-effect. |
-| **Eigen sprites voor de nieuwe vijanden** | De Spectral Archer, Slime Brute, Shieldbearer en de bazen hergebruiken bestaande spritesheets met een kleurtint. Eigen art kost tijd en zou licenties of eigen tekenwerk vragen. |
+| **Kogelspoor** (lijn achter elke kogel) | Eerst uitgesteld omdat het de pooling-meting kon beinvloeden. Na de metingen gebouwd: een Line2D met de laatste 8 plekken, gekleurd naar het soort kogel. |
+| **Volledige pathfinding (NavigationServer)** | Lopers komen niet meer vast te zitten achter vijvers: ze volgen een eenvoudig stroomveld om het water heen (`scenes/world/looproute.gd`). Dat is bewust simpeler dan de NavigationServer van Godot, omdat de vijvers de enige obstakels zijn. Het vangnet (na 20 s zonder kill worden achterblijvers verplaatst) blijft staan voor het geval dat. |
 | **Webversie (HTML5)** | De exportsjablonen zijn niet geïnstalleerd. In de README staat hoe je het zelf doet. |
 | **Controller-ondersteuning** | De game is gebouwd voor toetsenbord. Het PVA vraagt er niet om. |
 | **Meerdere arena's of maps** | Eén arena met willekeurig geplaatste vijvers en decoratie is genoeg voor het doel van de opdracht. |

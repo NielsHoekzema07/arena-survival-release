@@ -13,9 +13,9 @@ zwaarder het wordt. Wordt je geraakt en zijn je levenspunten op, dan begin je ee
 
 ## Spelen
 
-### [Download Arena Survival v1.0 voor Windows](https://github.com/NielsHoekzema07/arena-survival-release/releases/latest)
+### [Download Arena Survival v1.1 voor Windows](https://github.com/NielsHoekzema07/arena-survival-release/releases/latest)
 
-1. Klik op de link hierboven en download onder **Assets** het bestand `ArenaSurvival-v1.0-windows-x64.zip`.
+1. Klik op de link hierboven en download onder **Assets** het bestand `ArenaSurvival-v1.1-windows-x64.zip`.
 2. Pak het zip-bestand uit.
 3. Start `ArenaSurvival.exe`. Installeren is niet nodig.
 
@@ -43,15 +43,19 @@ Je wapen schiet vanzelf. Je hoeft alleen te bewegen, te dashen en slimme upgrade
 
 ## Wat zit erin
 
+- **Klassen:** aan het begin van elke run kies je de Jager, de Tank of het Glazen kanon.
 - **Waves** met oplopende moeilijkheid. Na elke wave kies je één van drie **upgrades**, en soms
-  een **uitdaging** voor een beloning.
-- **35 upgrades** in drie zeldzaamheden (gewoon, zeldzaam en episch), met kogeleffecten zoals
-  split shot, ricochet, explosies, kettingbliksem, vuur, gif en bevriezing, en risicovolle
-  duivelsdeals.
+  een **uitdaging** voor een beloning. Na een eindbaas kies je een **episch** als beloning.
+- **41 upgrades** in drie zeldzaamheden (gewoon, zeldzaam en episch), met kogeleffecten zoals
+  split shot, ricochet, explosies, kettingbliksem, vuur, gif en bevriezing, zoekende kogels,
+  en risicovolle duivelsdeals. Je gekozen upgrades staan als iconen linksonder; houd de muis
+  erboven voor uitleg.
 - **Synergieën:** bepaalde combinaties van upgrades versterken elkaar.
-- **Vijanden** die rennen, schieten, splitsen of een schild hebben, **elites** en **eindbazen**
-  elke vijfde wave.
-- **Pickups** voor herstel en tijdelijke snelheid.
+- **Vijanden** die rennen, schieten, splitsen, ontploffen, teleporteren of een schild hebben,
+  **elites** met een eigen truc en **vier eindbazen**, elke vijfde wave een.
+- **Gevaren in de arena:** bliksem en vuurpoelen die zich eerst aankondigen.
+- **Een dagelijkse run** met elke dag dezelfde arena, en **12 prestaties**.
+- Een arena met gras, aarde, vijvers, bloemen en een stenen muur, en **weer** (regen, mist, avond).
 - Een **hoofdmenu**, pauzescherm, records en instellingen, en een **benchmark** voor het
   pooling-onderzoek.
 
